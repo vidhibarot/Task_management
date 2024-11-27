@@ -1,7 +1,7 @@
 module.exports = (app) => {
-   
+    console.log("bacjend ma cvevvvvchhehehehhehe")
     app.get("/", (req, res) => {
-        res.status(200).send("Welcome to Demo project");
+        res.status(200).send("Welcome to  project");
     });
 
     // app.use("/products", require("./products"));

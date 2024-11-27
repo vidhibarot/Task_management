@@ -7,7 +7,7 @@ class UserController {
     // Get user token info
 
     async userRegister(req, res) {
-
+        console.log("user register bodyydyy>>", req?.body)
         try {
 
             const findEmail = await Users.find({ 'email': req.body.email })
@@ -43,7 +43,7 @@ class UserController {
             if (!isMatch) {
                 return res.status(400).send({ message: "You password is not matched" })
             }
-            
+
             const token = await userData.generateAndSaveToken();
 
             const findToken = await UserToken.findOne({ user_id: userData?.id })

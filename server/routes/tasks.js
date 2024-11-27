@@ -10,7 +10,7 @@ router.route("/addTask").post(userAuth, taskController.addTask);
 
 router.route("/getAllTask").get(taskController.getAllTasks);
 
-router.route("/getTaskByUser").post(userAuth,taskController.getTaskByUser);
+router.route("/getTaskByUser").get(userAuth,taskController.getTaskByUser);
 
 router.route("/getTaskByProject").post(taskController.getTaskByProject);
 
