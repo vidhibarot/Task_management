@@ -1,0 +1,180 @@
+[{
+  "_id": {
+    "$oid": "6745a58c5c254c606748aa65"
+  },
+  "name": "darshita",
+  "email": "darshita@gmail.com",
+  "password": "$2b$10$OYiFa5zK2/TwG9NUnzLtkerbQZ8AHLuYPaSPm9s1NgHujfbMNKW1u",
+  "createdAt": {
+    "$date": "2024-11-26T10:40:12.856Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-26T10:40:12.856Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6745a5a45c254c606748aa6c"
+  },
+  "name": "vidhi",
+  "email": "vidhi@gmail.com",
+  "password": "$2b$10$NT9NGQVO8ipjMwu2zk3v..1tB2Zm1liPq2/lP7GdeqidZI39xRZka",
+  "createdAt": {
+    "$date": "2024-11-26T10:40:36.636Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-26T10:40:36.636Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6745a5ee5c254c606748aa71"
+  },
+  "name": "vidhi",
+  "email": "vidhi123@gmail.com",
+  "password": "$2b$10$0BUKmOCB89hZDjx/a/GiV.XHaap6SkCgrDdSHg9yIed.EtPqfc98e",
+  "createdAt": {
+    "$date": "2024-11-26T10:41:50.541Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-26T10:41:50.541Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6746c40656c5438ad31d8745"
+  },
+  "name": "vidhi",
+  "email": "ralph@mailinator.com",
+  "password": "$2b$10$H7uhqsJim7Vd.6VfDvcQkeqztk5cHKO3v7tc.PXzEqK9ZL5OFZ63q",
+  "createdAt": {
+    "$date": "2024-11-27T07:02:30.457Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-27T07:02:30.457Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6746c58e009b13a5fcc2baa2"
+  },
+  "name": "vidhi",
+  "email": "vidhi@mailinator.com",
+  "password": "$2b$10$59QEzWqcb8N6vbEzPqB3v.eBtfmt8FG0.2Mbvry8Z5Au5gqQBvZ6O",
+  "createdAt": {
+    "$date": "2024-11-27T07:09:02.379Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-27T07:09:02.379Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6746c6c4009b13a5fcc2baa6"
+  },
+  "name": "vidhi",
+  "email": "nancypatel24197@gmail.com",
+  "password": "$2b$10$76iUniOSgvGM15aPP4okZ.Lm0Gk5SHrksAm535kHnTpcBsguD1/0C",
+  "createdAt": {
+    "$date": "2024-11-27T07:14:12.620Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-27T07:14:12.620Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6746c709009b13a5fcc2baa9"
+  },
+  "name": "vidhi",
+  "email": "gopi123@gmail.com",
+  "password": "$2b$10$yDGepTOPpwSqBjFm50zyCOVVVa7OKlTZ1a1LM9p82oJQ5xTfeRT7u",
+  "createdAt": {
+    "$date": "2024-11-27T07:15:21.188Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-27T07:15:21.188Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6746c9c6009b13a5fcc2baad"
+  },
+  "name": "vidhi",
+  "email": "vidhibarot2001@gmail.com",
+  "password": "$2b$10$EgG5LoHa9Aqap0ImyJHHGOUpi7G4EsNVF1VQfJw0ykUPySWxVFU9G",
+  "createdAt": {
+    "$date": "2024-11-27T07:27:02.476Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-27T07:27:02.476Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6746ca5c009b13a5fcc2bab6"
+  },
+  "name": "vidhi",
+  "email": "ralph1@mailinator.com",
+  "password": "$2b$10$cG6mfK5r33.wACgo0pJf2O/2B03pxzvOg2G7hcpXTKa/JkVFpSy/2",
+  "createdAt": {
+    "$date": "2024-11-27T07:29:32.429Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-27T07:29:32.429Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6746cb56009b13a5fcc2babf"
+  },
+  "name": "vidhi",
+  "email": "ralph123@mailinator.com",
+  "password": "$2b$10$K37sPUUdKHctEr.lwLqjN.FIC0A7gUbmxXBxRifgL3RNkAAEO.zrK",
+  "createdAt": {
+    "$date": "2024-11-27T07:33:42.845Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-27T07:33:42.845Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6746e7f9009b13a5fcc2bad0"
+  },
+  "name": "vidhi",
+  "email": "ralphr546@mailinator.com",
+  "password": "$2b$10$BVee13xg2CrzYPsbjBoVKuvH7A/PGdUV/10vl2fidBCCjSPuNM4ee",
+  "createdAt": {
+    "$date": "2024-11-27T09:35:53.803Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-27T09:35:53.803Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "67470fe8d6066cba9672b922"
+  },
+  "name": "richa",
+  "email": "richa123@gmail.com",
+  "password": "$2b$10$gia0NHSgpnX4mJ1A4E4XZuf7lh5JuzCx4x7Os4DPxthYSna6XO1t.",
+  "createdAt": {
+    "$date": "2024-11-27T12:26:16.388Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-27T12:26:16.388Z"
+  },
+  "__v": 0
+}]

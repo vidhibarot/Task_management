@@ -1,0 +1,10 @@
+[{
+  "_id": {
+    "$oid": "6747f61d7d16cfdb54fea54b"
+  },
+  "user_id": {
+    "$oid": "67470fe8d6066cba9672b922"
+  },
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3NDcwZmU4ZDYwNjZjYmE5NjcyYjkyMiIsImlhdCI6MTczMjc2OTMwOX0.QxjWSjRnr7bNNirFEW4IHnM336od1VH_87nxuA2qn-k",
+  "__v": 0
+}]
