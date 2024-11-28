@@ -67,7 +67,6 @@ const ProjectList = ({ onViewTasks, onAddTask, projectList }) => {
 
             if (response?.status === 200) {
                 setMessage(response?.data?.message || 'Task added successfully'); 
-                // onAddTask(taskData); 
                 setOpenAddTaskForm(false);
                 resetForm()
                 
@@ -173,7 +172,7 @@ const ProjectList = ({ onViewTasks, onAddTask, projectList }) => {
                                 <Field
                                     as={TextField}
                                     name="time"
-                                    label="Time (in hours)"
+                                    label="Time (in minutes)"
                                     fullWidth
                                     variant="outlined"
                                     margin="dense"

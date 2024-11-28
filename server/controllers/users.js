@@ -4,10 +4,8 @@ const bcrypt = require('bcrypt');
 
 class UserController {
 
-    // Get user token info
 
     async userRegister(req, res) {
-        console.log("user register bodyydyy>>", req?.body)
         try {
 
             const findEmail = await Users.find({ 'email': req.body.email })
@@ -69,7 +67,6 @@ class UserController {
     }
 
     async getAlluser(req, res) {
-        console.log("get All use ma ave chhe>>")
         try {
             const userData = await Users.find()
 

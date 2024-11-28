@@ -16,8 +16,8 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import MailIcon from '@mui/icons-material/Mail';
+import TaskAltIcon from '@mui/icons-material/TaskAlt';
+import AccountTreeIcon from '@mui/icons-material/AccountTree';
 import Tasks from '../pages/tasks';
 import Projects from '../pages/projects';
 import { Routes, Route } from 'react-router-dom';
@@ -152,7 +152,7 @@ const MiniDrawer = () => {
             <ListItem key="projects" disablePadding sx={{ display: 'block' }}>
               <ListItemButton onClick={() => handleComponentChange('projects')}>
                 <ListItemIcon>
-                  <MailIcon />
+                  <AccountTreeIcon />
                 </ListItemIcon>
                 <ListItemText primary="Projects" />
               </ListItemButton>
@@ -160,7 +160,7 @@ const MiniDrawer = () => {
             <ListItem key="tasks" disablePadding sx={{ display: 'block' }}>
               <ListItemButton onClick={() => handleComponentChange('tasks')}>
                 <ListItemIcon>
-                  <InboxIcon />
+                  <TaskAltIcon />
                 </ListItemIcon>
                 <ListItemText primary="My Tasks" />
               </ListItemButton>

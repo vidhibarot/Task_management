@@ -28,7 +28,7 @@ userSchema.pre('save', async function (next) {
 
 
 userSchema.methods.generateAndSaveToken = async function () {
-    const token = jwt.sign({ id: this._id }, process.env.JWT_SECRET);
+    const token = jwt.sign({ id: this._id }, "projectmanagement");
     return token;
 };
 

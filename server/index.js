@@ -7,7 +7,6 @@ app.use(cors());
 const PORT = process.env.PORT || 5000;
 app.use(bodyParser.json({ limit: "50mb" }));
 
-// const connectDB = require("./db/connect")
 const mongoose = require("mongoose")
 
 // routers
@@ -20,13 +19,11 @@ try {
 
 const start = async () => {
     try {
-        mongoose.connect(process.env.MONGO_URL, {
+        mongoose.connect("mongodb://127.0.0.1/project_management", {
             // useNewUrlParser:true,
             // useUnifiedTopology:true, 
         })
-        // await connectDB(process.env.MONGO_URL)
-        // await startd();
-        // await 
+        
         app.listen(PORT, () => {
             console.log("server is listening", PORT)
         })

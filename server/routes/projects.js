@@ -10,7 +10,4 @@ router.route("/addProject").post(userAuth, projectController.addProject);
 
 router.route("/getAllprojects").get(projectController.getAllProjects);
 
-
-
-
 module.exports = router

@@ -47,8 +47,6 @@ class projectController {
                 ]
             );
 
-            console.log("findprojectMMM", findProject)
-
             if (findProject?.length == 0) {
                 return res.status(400).send({ message: "Projects Data are not there" });
             }

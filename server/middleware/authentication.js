@@ -1,5 +1,4 @@
 var jwt = require('jsonwebtoken');
-// const userController = new (require('../controllers/users'))();
 const UserToken = require("../model/usertokens")
 class Authentication {
 
@@ -32,7 +31,6 @@ class Authentication {
             res.status(400).send({ message: "You are not authorized to access.'" })
             return;
         }
-console.log("req.userInfo",req.userInfo)
         req.userInfo = userToken ? userToken[0]?.users ? userToken[0]?.users : null : null;
         next();
     }

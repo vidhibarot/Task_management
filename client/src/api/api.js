@@ -25,7 +25,6 @@ export async function callPostApi({ url, body, headers }) {
   }
 }
 
-// GET request
 export async function callGetApi({ url, headers, id }) {
   try {
     
