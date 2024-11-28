@@ -47,10 +47,10 @@ const Tasks = () => {
             <Typography variant="h4" gutterBottom style={{ marginTop: "30px" }}>
                 My Tasks
             </Typography>
-            {myTasks.length === 0 ? (
+            {myTasks?.length === 0 ? (
                 <Typography>No tasks found.</Typography>
             ) : (
-                myTasks.map((projectGroup) => (
+                myTasks?.map((projectGroup) => (
                     <TableContainer component={Paper} key={projectGroup._id} sx={{ marginBottom: 3, width: "100%" }}>
                         <Typography variant="h6" gutterBottom style={{ padding: "20px 0px 0px 20px" }}>
                             Project: {projectGroup.projectDetails.name}
@@ -65,8 +65,8 @@ const Tasks = () => {
                             </TableHead>
                             <TableBody>
                                 {projectGroup.tasks.map((task) => (
-                                    <TableRow key={task._id}>
-                                        <TableCell>{task.name}</TableCell>
+                                    <TableRow key={task?._id}>
+                                        <TableCell>{task?.name}</TableCell>
                                         <TableCell>
                                             <Button
                                                 variant="contained"
@@ -78,11 +78,11 @@ const Tasks = () => {
                                                     },
                                                 }}
                                             >
-                                                {task.status === 1 ? "Pending" : "Completed"}
+                                                {task?.status === 1 ? "Pending" : "Completed"}
                                             </Button>
                                         </TableCell>
                                         <TableCell>
-                                            {task.time ? convertTime(task.time) : "Not decided"} {/* Display the formatted time */}
+                                            {task?.time ? convertTime(task?.time) : "Not decided"} {/* Display the formatted time */}
                                         </TableCell>
                                     </TableRow>
                                 ))}
