@@ -3,10 +3,8 @@ import storage from 'redux-persist/lib/storage';
 import { configureStore } from '@reduxjs/toolkit';
 import { useDispatch as useAppDispatch, useSelector as useAppSelector } from 'react-redux';
 import { persistStore } from 'redux-persist';
-// project-imports
 import reducers from '../reducers/index';
 
-// ==============================|| REDUX TOOLKIT - MAIN STORE ||============================== //
 const persistConfig = {
   key: 'userData',
   storage,

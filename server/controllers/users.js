@@ -67,6 +67,23 @@ class UserController {
             res.status(400).send({ message: "Internal server Error pls check" });
         }
     }
+
+    async getAlluser(req, res) {
+        console.log("get All use ma ave chhe>>")
+        try {
+            const userData = await Users.find()
+
+            res.status(200).send({
+                message: "request has been completed suceesfully",
+                data:userData
+            });
+
+        } catch (error) {
+            console.log(error);
+            res.status(400).send({ message: "Internal server Error pls check" });
+        }
+    }
+
 }
 
 module.exports = UserController;

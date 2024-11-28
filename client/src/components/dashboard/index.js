@@ -20,7 +20,7 @@ import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import Tasks from '../pages/tasks';
 import Projects from '../pages/projects';
-
+import { Routes, Route } from 'react-router-dom';
 const drawerWidth = 240;
 
 const openedMixin = (theme) => ({
@@ -49,7 +49,6 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'flex-end',
   padding: theme.spacing(0, 1),
-  // necessary for content to be below app bar
   ...theme.mixins.toolbar,
 }));
 
@@ -103,7 +102,7 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
 const MiniDrawer = () => {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
-  const [activeComponent, setActiveComponent] = React.useState('tasks'); // Default to "tasks"
+  const [activeComponent, setActiveComponent] = React.useState('tasks');
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -114,7 +113,7 @@ const MiniDrawer = () => {
   };
 
   const handleComponentChange = (component) => {
-    setActiveComponent(component); // Change active component based on user click
+    setActiveComponent(component);
   };
 
   return (
@@ -137,7 +136,7 @@ const MiniDrawer = () => {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Mini variant drawer
+            Project Management
           </Typography>
         </Toolbar>
       </AppBar>
@@ -172,6 +171,10 @@ const MiniDrawer = () => {
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
+          <Routes>
+            <Route path="/dashboard/projects" element={<Projects />} />
+            <Route path="/dashboard/mytasks" element={<Tasks />} />
+          </Routes>
           {activeComponent === 'tasks' ? <Tasks /> : <Projects />}
         </Box>
       </Box>

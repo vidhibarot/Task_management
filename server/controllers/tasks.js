@@ -1,9 +1,10 @@
 const Tasks = require("../model/tasks");
+const mongoose = require("mongoose");
 
 class taskController {
 
     async addTask(req, res) {
-
+        console.log("addddddd", req?.body)
         try {
 
             req.body.added_by = req?.userInfo[0]?._id;
@@ -149,11 +150,11 @@ class taskController {
     async getTaskByUser(req, res) {
         try {
             const userId = req?.userInfo[0]?._id;
-    
+
             if (!userId) {
                 return res.status(400).send({ message: "User not found or invalid." });
             }
-    
+
             // Aggregation pipeline to group tasks by project_id and get related project and user details
             const userTasks = await Tasks.aggregate([
                 // Step 1: Match tasks by project_id and added_for (userId)
@@ -205,12 +206,12 @@ class taskController {
                     }
                 }
             ]);
-    
+
             // Check if no tasks were found
             if (userTasks?.length === 0) {
                 return res.status(400).send({ message: "No tasks found for this user in the given project." });
             }
-    
+
             // Send the grouped and enriched tasks data with project and user info
             res.status(200).send({
                 message: "Request has been completed successfully.",
@@ -221,11 +222,61 @@ class taskController {
             res.status(400).send({ message: "Internal server error. Please check." });
         }
     }
-    
+
 
     async getTaskByProject(req, res) {
+        console.log("getTaskByProjectgetTaskByProject")
         try {
-            const userTasks = await Tasks.find({ project_id: req?.body?.project_id })
+            const userTasks = await Tasks.aggregate([
+                {
+                    $match: {
+                        project_id: new mongoose.Types.ObjectId(req.body.project_id), // Convert project_id to ObjectId
+                    },
+                },
+                {
+                    $lookup: {
+                        from: "users",
+                        localField: "added_by",
+                        foreignField: "_id",
+                        as: "addedByUser",
+                    },
+                },
+                {
+                    $lookup: {
+                        from: "users",
+                        localField: "added_for",
+                        foreignField: "_id",
+                        as: "addedForUser",
+                    },
+                },
+                {
+                    $lookup: {
+                        from: "projects",
+                        localField: "project_id",
+                        foreignField: "_id",
+                        as: "projects",
+                    },
+                },
+                {
+                    $unwind: {
+                        path: "$addedByUser",
+                        preserveNullAndEmptyArrays: true, // Optional: Prevent errors if no match is found
+                    },
+                },
+                {
+                    $unwind: {
+                        path: "$addedForUser",
+                        preserveNullAndEmptyArrays: true, // Optional: Prevent errors if no match is found
+                    },
+                },
+                {
+                    $unwind: {
+                        path: "$projects",
+                        preserveNullAndEmptyArrays: true, // Optional: Prevent errors if no match is found
+                    },
+                },
+            ]);
+
 
             if (userTasks?.length == 0) {
                 return res.status(400).send({ message: "Tasks Data are not there" });

@@ -3,28 +3,21 @@ import React, { useEffect, useState } from "react";
 import { Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Typography } from "@mui/material";
 import { userTasksApi } from "../../api/tasks";
 import { red, green } from "@mui/material/colors";
-import moment from "moment"; // Import moment for time conversion
+import moment from "moment"; 
 
 const Tasks = () => {
     const [myTasks, setMyTasks] = useState([]);
 
-    // Fetch tasks by user
+    
     const getAllTask = async () => {
         const response = await userTasksApi();
-        console.log("response>>>", response);
-
-        setMyTasks(response?.data?.data); // Assuming response has 'data' field with tasks grouped by project_id
+        setMyTasks(response?.data?.data); 
     };
 
     useEffect(() => {
         getAllTask();
     }, []);
 
-    // Function to convert time (in minutes) to hours, minutes, and seconds
-    // const convertTime = (timeInMinutes) => {
-    //     const duration = moment.duration(timeInMinutes, "minutes");
-    //     return `${duration.hours()} hours ${duration.minutes()} minutes ${duration.seconds()} seconds`;
-    // };
     const convertTime = (timeInMinutes) => {
         const duration = moment.duration(timeInMinutes, "minutes");
         const hours = duration.hours();
@@ -32,12 +25,12 @@ const Tasks = () => {
 
         let timeString = "";
 
-        // Only add hours if non-zero
+       
         if (hours > 0) {
             timeString += `${hours} hours `;
         }
 
-        // Only add minutes if non-zero
+        
         if (minutes > 0) {
             timeString += `${minutes} minutes `;
         }
@@ -46,7 +39,7 @@ const Tasks = () => {
     };
 
     const getStatusColor = (status) => {
-        return status === 1 ? red[500] : green[500]; // Red for pending (1), Green for completed (0)
+        return status === 1 ? red[500] : green[500]; 
     };
 
     return (

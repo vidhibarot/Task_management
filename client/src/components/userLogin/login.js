@@ -9,18 +9,16 @@ import {
 } from "@mui/material";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { userLoginApi } from "../../api/users"; // Add your login API
+import { userLoginApi } from "../../api/users"; 
 import { useNavigate } from 'react-router';
 import { useUserDispatch } from "../../redux/dispatch/userdispatch";
 
 const UserLogin = () => {
   const navigate = useNavigate();
   const { setLoginData, setUserData, setModuleData } = useUserDispatch()
-  // State for error and success messages
   const [message, setMessage] = useState(null);
   const [messageType, setMessageType] = useState("success");
 
-  // Validation schema
   const validationSchema = Yup.object({
     email: Yup.string()
       .email("Invalid email address")
@@ -33,16 +31,15 @@ const UserLogin = () => {
   const handleSubmit = async (values) => {
     try {
       let response = await userLoginApi(values);
-      console.log("Form Submitted with values: ", response);
 
       if (response?.status === 200) {
         setMessage("Login successful! Redirecting...");
         setMessageType("success");
         setLoginData(response?.data?.data?.usertoken);
         setUserData(response?.data?.data?.userData);
-        // setTimeout(() => {
-          navigate("/dashboard"); // Redirect to the dashboard or home page
-        // }, 3000); // Redirect after 3 seconds
+      
+          navigate("/dashboard");
+      
       } else {
         setMessage(response?.data?.message || "Login failed.");
         setMessageType("error");
@@ -53,7 +50,6 @@ const UserLogin = () => {
     }
   };
 
-  // Formik configuration
   const formik = useFormik({
     initialValues: {
       email: "",
@@ -61,7 +57,7 @@ const UserLogin = () => {
     },
     validationSchema,
     onSubmit: (values) => {
-      handleSubmit(values);  // Call your custom function here
+      handleSubmit(values); 
     },
   });
 
