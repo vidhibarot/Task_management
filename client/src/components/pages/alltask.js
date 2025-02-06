@@ -76,7 +76,7 @@ const AllTasks = ({ id, onViewTasks }) => {
                 </Button>
             </div>
 
-            {myTasks.length === 0 ? (
+            {myTasks?.length === 0 ? (
                 <Typography>No tasks found.</Typography>
             ) : (
                 <TableContainer component={Paper} sx={{ marginTop: 3, width: "100%" }}>
@@ -92,7 +92,7 @@ const AllTasks = ({ id, onViewTasks }) => {
                             </TableRow>
                         </TableHead>
                         <TableBody>
-                            {myTasks.map((task) => (
+                            {myTasks?.map((task) => (
                                 <TableRow key={task?._id}>
                                     <TableCell>{task?.name}</TableCell>
                                     <TableCell>{task?.projects?.name || "No project name"}</TableCell>
